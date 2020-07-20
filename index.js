@@ -36,11 +36,7 @@ function cellClickHandler(event) {
   if (!cellIsPlayed[cellID] || cellIsPlayed[cellID] === '') {
     cellIsPlayed[cellID] = currentPlayer;
     cell.innerHTML = `<p class='cellFill'>${currentPlayer}</p>`;
-    if (currentPlayer === 'X') {
-      currentPlayer = 'O'
-    } else {
-      currentPlayer = 'X'
-    };
+    (currentPlayer === 'X') ? currentPlayer = 'O' : currentPlayer = 'X';
     checkResult();
   } else {
     console.log('cell is already played');
