@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+/*-------------------*/
+/*----- GENERAL -----*/
+/*-------------------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  color: #fff;
+  background-color: #AED9E0;
+}
+
+button {
+  padding: 8px;
+  margin: 16px auto;
+  background-color: #AED9E0;
+  border: solid 4px #ffffff;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  transition: ease 300ms;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: #FFA69E;
+  border: solid 4px #ffffff;
+  color: #ffffff;
+  box-shadow: 2px 2px #FFA69E;
+}
+
+/*------------------*/
+/*----- HEADER -----*/
+/*------------------*/
+
+#header {
+  text-align: center;
+  margin: 8px auto;
+}
+
+/*----------------------*/
+/*----- GAMESTATUS -----*/
+/*----------------------*/
+
+#gameStatus {
+  width: 100%;
+  text-align: center;
+  margin: 16px;
+}
+
+#currentPlayer {
+  text-align: center;
+  color: #FFA69E;
+}
+
+/*----------------------*/
+/*----- GAMERESULT -----*/
+/*----------------------*/
+
+#gameResult {
+  transition: ease 300ms;
+}
+
+#resultHeadline {
+  font-size: 24px;
+  margin: 16px auto;
+  padding: 8px;
+  border: solid 4px #ffffff;
+
+  transform: scale(1);
+	animation: pulse 2s;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+		box-shadow: 0 0 0 0 #FFA69E;
+	}
+
+	70% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 10px #FFA69E;
+	}
+
+	100% {
+		transform: scale(1);
+		box-shadow: 0 0 0 0 #FFA69E;
+	}
+}
+
+/*---------------------*/
+/*----- GAMEBOARD -----*/
+/*---------------------*/
+
+#gameContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 16px;
+}
+
+#boardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 500px;
+}
+
+#currentPlayer {
+  font-size: 24px;
+  display: inline-block;
+}
+
+/*-----------------*/
+/*----- CELLS -----*/
+/*-----------------*/
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33.3%;
+  height: 33.3%;
+}
+
+.topLeft {
+  border-bottom: #ffffff solid 2px;
+  border-right: #ffffff solid 2px;
+}
+
+.topMiddle {
+  border-bottom: #ffffff solid 2px;
+  border-right: #ffffff solid 2px;
+  border-left: #ffffff solid 2px;
+}
+
+.topRight {
+  border-bottom: #ffffff solid 2px;
+  border-left: #ffffff solid 2px;
+}
+
+.center {
+  border: #ffffff solid 2px;
+}
+
+.centerLeft {
+  border-top: #ffffff solid 2px;
+  border-right: #ffffff solid 2px;
+  border-bottom: #ffffff solid 2px;
+}
+
+.centerRight {
+  border-top: #ffffff solid 2px;
+  border-left: #ffffff solid 2px;
+  border-bottom: #ffffff solid 2px;
+}
+
+
+.bottomRight {
+  border-top: #ffffff solid 2px;
+  border-left: #ffffff solid 2px;
+}
+
+.bottomLeft {
+  border-right: #ffffff solid 2px;
+  border-top: #ffffff solid 2px;
+}
+
+.bottomMiddle {
+  border-top: #ffffff solid 2px;
+  border-right: #ffffff solid 2px;
+  border-left: #ffffff solid 2px;
+}
+
+.cellFill {
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 128px;
+  font-weight: 200;
+  text-shadow: 2px 2px #FFA69E;
+}
+
+/*--------------------------*/
+/*----- HELPER CLASSES -----*/
+/*--------------------------*/
+
+.displayNone {
+  display: none;
+}
