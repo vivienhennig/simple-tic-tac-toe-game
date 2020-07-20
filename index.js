@@ -7,6 +7,8 @@ const currentPlayerDisplay = document.getElementById('currentPlayer');
 let currentPlayer = 'X';
 let cellIsPlayed = ['', '', '', '', '', '', '', '', ''];
 let gameIsActive = true;
+let gameResult = '';
+let winner = '';
 const isPlayed = true;
 const winCombinations = [
   [0, 1, 2],
@@ -18,8 +20,6 @@ const winCombinations = [
   [3, 4, 5],
   [6, 7, 8],
 ];
-let gameResult = '';
-let winner = '';
 
 
 cells.forEach(cell => {
@@ -38,8 +38,6 @@ function cellClickHandler(event) {
     cell.innerHTML = `<p class='cellFill'>${currentPlayer}</p>`;
     (currentPlayer === 'X') ? currentPlayer = 'O' : currentPlayer = 'X';
     checkResult();
-  } else {
-    console.log('cell is already played');
   };
   currentPlayerDisplay.innerText = `Current Player: ${currentPlayer}`;
 }

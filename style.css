@@ -19,7 +19,7 @@ body {
 button {
   padding: 8px;
   margin: 16px auto;
-  background-color: #AED9E0;
+  background-color: #aed9e0;
   border: solid 4px #ffffff;
   color: #ffffff;
   text-transform: uppercase;
@@ -58,7 +58,7 @@ button:hover {
 
 #currentPlayer {
   text-align: center;
-  color: #FFA69E;
+  color: #34868e;;
 }
 
 /*----------------------*/
