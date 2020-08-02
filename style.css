@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+:root {
+  --white: #fff;
+  --backgroundColor: #aed9e0;
+  --highlightColor: #FFA69E;
+  --textColor: #34868e;
+}
+
 /*-------------------*/
 /*----- GENERAL -----*/
 /*-------------------*/
@@ -12,16 +19,16 @@
 
 body {
   font-family: Roboto, sans-serif;
-  color: #fff;
-  background-color: #AED9E0;
+  color: var(--white);
+  background-color: var(--backgroundColor);
 }
 
 button {
   padding: 8px;
   margin: 16px auto;
-  background-color: #aed9e0;
-  border: solid 4px #ffffff;
-  color: #ffffff;
+  background-color: var(--backgroundColor);
+  border: solid 4px var(--white);
+  color: var(--white);
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 600;
@@ -31,10 +38,10 @@ button {
 }
 
 button:hover {
-  background-color: #FFA69E;
-  border: solid 4px #ffffff;
-  color: #ffffff;
-  box-shadow: 2px 2px #FFA69E;
+  background-color: var(--highlightColor);
+  border: solid 4px var(--white);
+  color: var(--white);
+  box-shadow: 2px 2px var(--highlightColor);
 }
 
 /*------------------*/
@@ -43,7 +50,7 @@ button:hover {
 
 #header {
   text-align: center;
-  margin: 8px auto;
+  margin: 16px auto 8px auto;
 }
 
 /*----------------------*/
@@ -58,7 +65,7 @@ button:hover {
 
 #currentPlayer {
   text-align: center;
-  color: #34868e;;
+  color: var(--textColor);
 }
 
 /*----------------------*/
@@ -73,7 +80,7 @@ button:hover {
   font-size: 24px;
   margin: 16px auto;
   padding: 8px;
-  border: solid 4px #ffffff;
+  border: solid 4px var(--white);
 
   transform: scale(1);
 	animation: pulse 2s;
@@ -82,17 +89,17 @@ button:hover {
 @keyframes pulse {
 	0% {
 		transform: scale(1);
-		box-shadow: 0 0 0 0 #FFA69E;
+		box-shadow: 0 0 0 0 var(--highlightColor);
 	}
 
 	70% {
 		transform: scale(0.95);
-		box-shadow: 0 0 0 10px #FFA69E;
+		box-shadow: 0 0 0 10px var(--highlightColor);
 	}
 
 	100% {
 		transform: scale(1);
-		box-shadow: 0 0 0 0 #FFA69E;
+		box-shadow: 0 0 0 0 var(--highlightColor);
 	}
 }
 
@@ -135,52 +142,52 @@ button:hover {
 }
 
 .topLeft {
-  border-bottom: #ffffff solid 2px;
-  border-right: #ffffff solid 2px;
+  border-bottom: var(--white) solid 2px;
+  border-right: var(--white) solid 2px;
 }
 
 .topMiddle {
-  border-bottom: #ffffff solid 2px;
-  border-right: #ffffff solid 2px;
-  border-left: #ffffff solid 2px;
+  border-bottom: var(--white) solid 2px;
+  border-right: var(--white) solid 2px;
+  border-left: var(--white) solid 2px;
 }
 
 .topRight {
-  border-bottom: #ffffff solid 2px;
-  border-left: #ffffff solid 2px;
+  border-bottom: var(--white) solid 2px;
+  border-left: var(--white) solid 2px;
 }
 
 .center {
-  border: #ffffff solid 2px;
+  border: var(--white) solid 2px;
 }
 
 .centerLeft {
-  border-top: #ffffff solid 2px;
-  border-right: #ffffff solid 2px;
-  border-bottom: #ffffff solid 2px;
+  border-top: var(--white) solid 2px;
+  border-right: var(--white) solid 2px;
+  border-bottom: var(--white) solid 2px;
 }
 
 .centerRight {
-  border-top: #ffffff solid 2px;
-  border-left: #ffffff solid 2px;
-  border-bottom: #ffffff solid 2px;
+  border-top: var(--white) solid 2px;
+  border-left: var(--white) solid 2px;
+  border-bottom: var(--white) solid 2px;
 }
 
 
 .bottomRight {
-  border-top: #ffffff solid 2px;
-  border-left: #ffffff solid 2px;
+  border-top: var(--white) solid 2px;
+  border-left: var(--white) solid 2px;
 }
 
 .bottomLeft {
-  border-right: #ffffff solid 2px;
-  border-top: #ffffff solid 2px;
+  border-right: var(--white) solid 2px;
+  border-top: var(--white) solid 2px;
 }
 
 .bottomMiddle {
-  border-top: #ffffff solid 2px;
-  border-right: #ffffff solid 2px;
-  border-left: #ffffff solid 2px;
+  border-top: var(--white) solid 2px;
+  border-right: var(--white) solid 2px;
+  border-left: var(--white) solid 2px;
 }
 
 .cellFill {
@@ -188,7 +195,7 @@ button:hover {
   font-family: Montserrat, sans-serif;
   font-size: 128px;
   font-weight: 200;
-  text-shadow: 2px 2px #FFA69E;
+  text-shadow: 2px 2px var(--highlightColor);
 }
 
 /*--------------------------*/
